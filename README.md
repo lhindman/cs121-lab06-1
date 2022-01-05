@@ -1,9 +1,6 @@
-# Lab06 Guide
+# Module 6 Lab Guide (part 1)
 ## Getting Started
 [Lab Introduction Video](https://youtu.be/Gz_ZKspfhuE)  
-- Please clone the [Mod06 Code Examples](https://github.com/lhindman/cs121-mod06-examples.git).
-- Please watch the [Activity 4 Walkthough Videos](https://www.youtube.com/playlist?list=PLbxWwkW_BhyB9fHkeDHCyzfbV6MB4IeNU).  
-
 
 ### Code Style Requirements
 Please review the [CS121 Style Guide](https://docs.google.com/document/d/1LWbGQBKkApnNAzzgwOSvRM03DmhYWx5yEfecT2WXfjI/edit?usp=sharing) and apply it in all lab activities and projects this semester. Coding Style will assessed as part of your lab and project grades.
@@ -12,9 +9,83 @@ Please review the [CS121 Style Guide](https://docs.google.com/document/d/1LWbGQB
 - Code must compile without warnings using openjdk11
 - Code must run without errors or warnings on safe-path and edge test cases
 - More to come as we learn about input validation and exception handling 
-## Activity 1 - CountFlips
+
+## Lab Warmup - FlowSample (required)
 ### Problem Description
-Revise the Coin class, found in the Module 6 examples, such that its state is represented internally using a boolean variable.  Test the new versions of the class as part of the CountFlips and FlipRace programs.
+Create a class called FlowSample that represents a single, point-in-time snapshot, of USGS river flow water data. For this lab we will be using data collected from the [Boise River at the Glenwood Bridge](https://waterdata.usgs.gov/monitoring-location/13206000/#parameterCode=00065&period=P7D). A sample data file containing 7 days worth of samples has been included. Detailed information on the format of this information can be found on the [USGS NWIS Help Site](http://help.waterdata.usgs.gov/faq/about-tab-delimited-output). 
+
+Each sample contains the following values:
+- Agency
+- SiteNumber
+- Timestamp
+- TimeZone
+- GageHeight (water level) in feet
+- QualificationCode (P means provisional value, subject to change)
+
+### Program Design
+The FlowSample class will represent a single sample of data.  It should contain private instance variables for each of the above sample values with data types as follows:
+- String: agency, siteNumber, timeZone and qualCode
+- double: data
+- DataTime: timestamp
+
+The constructor for FlowSample should be an initial value constructor with the following header signature:
+```
+public FlowSample(String agency, String siteNumber, String timeZone, String qualCode, String timestamp, double data)
+```
+
+Once created, a sample should not be able to be modified, so no mutator (setter) methods should be created. However accessor (getter) methods should be created for each of the instance variables except time zone. Two accessor methods should be implemented for the timestamp data, one that shows the local time formatted as a String and a second that shows UTC time formated as a String. The following lists the expected accessor methods for the FlowSample class
+```
+public String getAgency()
+public String getSiteNumber()
+public String getLocalTimestamp()
+public String getUTCTimestamp()
+public double getData()
+public String getQualCode()
+```
+
+Add a toString() method that represents the FlowSample object as a nicely formatted String as shown below:
+
+```
+### <agency> - <siteNumber> ###
+Time: <UTCTimeStamp>
+Value: <data>
+```
+
+Once the FlowSample class has been create, add code to FlowSampleDriver.java that users a Scanner object to prompt the user for each of the data values, creates a new FlowSample object, then calls each of the accessor methods and the toString method and displays the results in the console.
+
+#### Expected Program Output (with sample user input)
+```
+---------------------
+|    Data Entry     |
+---------------------
+Please enter the following sample data values
+Agency: USGS
+Site Number: 13206000
+Timestamp: 2021-12-29 14:45
+Time Zone: MST
+Gage Height: 3.60
+Qualification Code: P
+
+---------------------
+| Data Confirmation |
+---------------------
+You entered the following:
+Agency: USGS
+Site Number: 13206000
+Local Timestamp: 2021-12-29 14:45
+UTC Timestamp: 2021-12-29 14:45
+Gage Height: 3.60
+Qualification Code: P
+
+---------------------
+|  Sample Summary   |
+---------------------
+### USGS - 13206000 ###
+Time: 2021-12-29 14:45
+Value: 3.60
+
+```
+
 ### Implementation Guide
 1. Open the Module 6 code examples and copy Coin.java, FlipRace.java and CountFlips.java from the CountFlips folder into the folder named A1-CountFlips
 2. Modify Coin.java as described in the Problem Description
