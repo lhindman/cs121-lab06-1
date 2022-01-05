@@ -1,0 +1,32 @@
+{
+	"folders": [
+		{
+			"path": "LabGuide"
+		},
+		{
+			"path": "A1-CountFlips"
+		},
+		{
+			"path": "A2-Kennel"
+		},
+		{
+			"path": "A3-Bookshelf"
+		},
+		{
+			"path": "A4-SnakeEyes"
+		},
+		{
+			"path": "A5-GameOfPig"
+		}
+	],
+	"settings": {
+		"files.exclude": {
+			"**/.git": true,
+			"**/.svn": true,
+			"**/.hg": true,
+			"**/CVS": true,
+			"**/.DS_Store": true,
+			"**/.placeholder": true
+		}
+	}
+}
