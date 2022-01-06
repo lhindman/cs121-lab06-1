@@ -4,19 +4,13 @@
 			"path": "LabGuide"
 		},
 		{
-			"path": "A1-CountFlips"
+			"path": "FlowSampleEntry"
 		},
 		{
-			"path": "A2-Kennel"
+			"path": "FlowSampleParser"
 		},
 		{
-			"path": "A3-Bookshelf"
-		},
-		{
-			"path": "A4-SnakeEyes"
-		},
-		{
-			"path": "A5-GameOfPig"
+			"path": "CodingJournal"
 		}
 	],
 	"settings": {
