@@ -10,7 +10,7 @@ Please review the [CS121 Style Guide](https://docs.google.com/document/d/1LWbGQB
 - Code must run without errors or warnings on safe-path and edge test cases
 - More to come as we learn about input validation and exception handling 
 
-## Lab Warmup - FlowSampleEntry (required)
+## Lab Warmup - FlowSampleEntry (Required)
 ### Problem Description
 Create a class called FlowSample that represents a single, point-in-time snapshot, of USGS river flow water data. For this lab we will be using data collected from the [Boise River at the Glenwood Bridge](https://waterdata.usgs.gov/monitoring-location/13206000/#parameterCode=00060&period=P7D). A sample data file containing 7 days worth of samples has been included. Detailed information on the format of this information can be found on the [USGS NWIS Help Site](http://help.waterdata.usgs.gov/faq/about-tab-delimited-output). 
 
@@ -93,7 +93,7 @@ Flow Rate: 226
 4. Commit the changes to your local repository with a message stating that Lab Warmup is completed.
 5. Push the changes from your local repository to the github classroom repository.
 
-## Lab Activity 1 - FlowSampleParser
+## Lab Activity 1 - FlowSampleParser (Required)
 ### Problem Description
 The USGS provides FlowSample data in tab-delimited lines of text where each data field is separate by tabs. This is nearly the same situation that we learned about in the previous module with comma separated values, except here tabs are used to separate the fields instead of commas. For this activity we are going add functionality to the FlowSample class so that we can construct a new FlowSample from a single String value containing the required fields in tab-delimited format. Instead of prompting the user for each individual value, we will prompt the user for a single line of text that contains the tab-separated values as shown in the output below:
 
