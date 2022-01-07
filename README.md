@@ -137,9 +137,6 @@ Flow Rate: 226.0
 The USGS provides FlowSample data in tab-delimited lines of text where each data field is separate by tabs. This is nearly the same situation that we learned about in the previous module with comma separated values, except here tabs are used to separate the fields instead of commas. For this activity we are going add functionality to the FlowSample class so that we can construct a new FlowSample from a single String value containing the required fields in tab-delimited format. Instead of prompting the user for each individual value, we will prompt the user for a single line of text that contains the tab-separated values as shown in the output below:
 
 ```
----------------------
-|    Data Entry     |
----------------------
 Please enter the line of tab separated data:
 USGS	13206000	2021-12-30 14:30	MST	226	P
 ```
