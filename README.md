@@ -25,7 +25,7 @@ Each sample contains the following values:
 ### Program Design
 #### Instance Variables
 The FlowSample class will represent a single sample of data.  It should contain private instance variables for each of the above sample values with data types as follows:
-- **String**: agency, siteNumber, timeZone and qualCode
+- **String**: agency, siteNumber and qualCode
 - **double**: flowRate
 - **Date**: timestamp
 
