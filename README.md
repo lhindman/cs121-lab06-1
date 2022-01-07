@@ -20,7 +20,9 @@ Each sample contains the following values:
 - Timestamp
 - TimeZone
 - FlowRate (cubic ft / sec)
-- QualificationCode (P means provisional value, subject to change)
+- QualificationCode
+    - **P** means provisional value, subject to change
+    - **A** means approved value, ready for publication
 
 ### Program Design
 #### Instance Variables
@@ -30,10 +32,30 @@ The FlowSample class will represent a single sample of data.  It should contain 
 - **Date**: timestamp
 
 #### Constructor
-The constructor for FlowSample should be an initial value constructor with the following header signature:
+The constructor for FlowSample should be an initial value constructor with the following signature:
 ```
 public FlowSample(String agency, String siteNumber, String timeZone, String qualCode, String timestamp, double flowRate)
 ```
+A SimpleDateFormat object should be created to match the format of the USGS timestamp value and apply the correct TimeZone configuration. The following code shows how to create the required SimpleDateFormat object.
+```
+SimpleDateFormat myFormatter = new SimpleDateFormat("yyyy-MM-dd HH:mm");
+myFormatter.setTimeZone(TimeZone.getTimeZone(timeZone));
+```
+You can then use the parse() method of the SimplerDateFormat object to create a Date object from the timestamp String data. This can throw a ParseError exception. If this occurs, catch the exception, display an error message in the console and instantiate a new Date object configured for the epoch and assign it to the timestamp instance variable as shown in the code below:
+
+```
+try
+{
+    this.timestamp = myFormatter.parse(timestamp);
+}
+catch (ParseException e) 
+{
+    System.out.println("Error: Unable to parse timestamp: " + timestamp);
+    /* Initialize timestamp with the epoch, January 1, 1970, 00:00:000 GMT */
+    this.timestamp = new Date(0);
+}
+```
+
 **Note:**  We're introducing a few new classes here to help us work more effectively with the timestamp data. Specifically they are the [Date](https://docs.oracle.com/javase/8/docs/api/java/util/Date.html), [TimeZone](https://docs.oracle.com/javase/8/docs/api/java/util/TimeZone.html) and [SimpleDateFormat](https://docs.oracle.com/javase/8/docs/api/java/text/SimpleDateFormat.html). Depending upon the semester, we may or may not introduce these classes in Module 3. However, these classes are sufficiently covered in the walkthrough video to satisfy the requirements of this lab even if we did not specificly present these classes in the lecture videos this semester.  :)
 
 #### Getters and Setters
