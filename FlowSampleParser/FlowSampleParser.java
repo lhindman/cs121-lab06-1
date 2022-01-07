@@ -1,3 +1,7 @@
-public class FlowSampleParser {
-    
+public class FlowSampleParser 
+{
+    public static void main(String[] args)
+    {
+        
+    }    
 }
