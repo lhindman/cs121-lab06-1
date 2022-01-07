@@ -37,7 +37,7 @@ public FlowSample(String agency, String siteNumber, String timeZone, String qual
 **Note:**  We're introducing a few new classes here to help us work more effectively with the timestamp data. Specifically they are the [Date](https://docs.oracle.com/javase/8/docs/api/java/util/Date.html), [TimeZone](https://docs.oracle.com/javase/8/docs/api/java/util/TimeZone.html) and [SimpleDateFormat](https://docs.oracle.com/javase/8/docs/api/java/text/SimpleDateFormat.html). Depending upon the semester, we may or may not introduce these classes in Module 3. However, these classes are sufficiently covered in the walkthrough video to satisfy the requirements of this lab even if we did not specificly present these classes in the lecture videos this semester.  :)
 
 #### Getters and Setters
-Once created, a sample should not be able to be modified, so no mutator (setter) methods should be created. However accessor (getter) methods should be created for each of the instance variables except time zone. Two accessor methods should be implemented for the timestamp data, one that shows the local time formatted as a String and a second that shows UTC time formated as a String. The following lists the expected accessor methods for the FlowSample class
+Once created, a sample should not be able to be modified, so no mutator (setter) methods should be created. However accessor (getter) methods should be created for each of the instance variables except timeZone and timeStamp.The following lists the expected accessor methods for the FlowSample class
 ```
 public String getAgency()
 public String getSiteNumber()
@@ -46,7 +46,7 @@ public String getQualCode()
 ```
 
 #### Other Methods
-Instead of writing a simple accessor method called getTimestamp that returns a reference to the Date object, it is more useful to provide methods that can process the timezone information appropriately and return a String value with a custom date and time format.  Use the javadoc comments below to implement the required functionality
+Instead of writing a simple accessor method called getTimestamp that returns a reference to the Date object, it is more useful to provide methods that can process the timestamp and time zone information appropriately and return a String value with a custom date and time format.  Use the javadoc comments below to implement the required functionality. Again, these methods utilize the  [TimeZone](https://docs.oracle.com/javase/8/docs/api/java/util/TimeZone.html) and [SimpleDateFormat](https://docs.oracle.com/javase/8/docs/api/java/text/SimpleDateFormat.html) classes and their usage is presented in the walkthrough video. :)
 ```
 /**
  * Return a String representation of the timestamp with the following
@@ -74,7 +74,7 @@ public String getTimestamp() {...}
 public String getUTCTimestamp() {...}
 ```
 
-Add a toString() method that represents the FlowSample object as a nicely formatted String as shown below:
+Add a toString() method that represents the FlowSample object as a nicely formatted String as shown below. 
 ```
 ### <agency> - <siteNumber> ###
 Timestamp: <UTCTimeStamp>
