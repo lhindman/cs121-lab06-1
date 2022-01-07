@@ -49,7 +49,7 @@ public String getQualCode()
 Instead of writing a simple accessor method called getTimestamp that returns a reference to the Date object, it is more useful to provide methods that can process the timezone information appropriately and return a String value with a custom date and time format.  Use the javadoc comments below to implement the required functionality
 ```
     /**
-     * Return a String representation of the with the following
+     * Return a String representation of the timestamp with the following
      *     custom format: "EEE dd MMM yyyy hh:mm:ss a z"
      * 
      *     The timezone value should remain unchanged
@@ -62,7 +62,7 @@ Instead of writing a simple accessor method called getTimestamp that returns a r
 ```
 ```
     /**
-     * Return a String representation of the with the following
+     * Return a String representation of the timestamp with the following
      *     custom format: "EEE dd MMM yyyy hh:mm:ss a z"
      * 
      *     The timezone value should adjusted to UTC
@@ -75,10 +75,9 @@ Instead of writing a simple accessor method called getTimestamp that returns a r
 ```
 
 Add a toString() method that represents the FlowSample object as a nicely formatted String as shown below:
-
 ```
 ### <agency> - <siteNumber> ###
-Time: <UTCTimeStamp>
+Timestamp: <UTCTimeStamp>
 Flow Rate: <flowRate>
 ```
 
@@ -103,17 +102,17 @@ Qualification Code: P
 You entered the following:
 Agency: USGS
 Site Number: 13206000
-Local Timestamp: 2021-12-30 14:30
-UTC Timestamp: 2021-12-30 14:30
-Flow Rate: 226
+Timestamp: Thu 30 Dec 2021 02:30:00 PM MST
+UTC Timestamp: Thu 30 Dec 2021 09:30:00 PM UTC
+Flow Rate: 226.0
 Qualification Code: P
 
 ---------------------
 |  Sample Summary   |
 ---------------------
 ### USGS - 13206000 ###
-Sample Time: 2021-12-30 14:30
-Flow Rate: 226
+Timestamp: Thu 30 Dec 2021 09:30:00 PM UTC
+Flow Rate: 226.0
 
 ```
 
