@@ -120,7 +120,7 @@ Flow Rate: 226.0
 ### Implementation Guide
 1. Expand the folder named FlowSampleEntry and open both FlowSample.java and FlowSampleEntry.java
 2. Design a program to satisfy the requirements in the Problem Description and Program Design sections
-3. Test the program using the sample user input and compare against the expected output. Carefully think about each of the different cases you'll need to test for to verify that the application is functioning properly.
+3. Test the program using the sample user input and compare against the expected output.
 4. Commit the changes to your local repository with a message stating that Lab Warmup is completed.
 5. Push the changes from your local repository to the github classroom repository.
 
