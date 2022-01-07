@@ -162,18 +162,18 @@ Once the FlowSample class has been updated, add code to the main() method in Flo
 ##### Expected Program Output (with sample user input)
 ```
 ---------------------
-|    Data Entry     |
+|     Data Entry    |
 ---------------------
 Please enter the line of tab separated data:
-USGS	13206000	2021-12-30 14:30	MST	226	P
+USGS    13206000        2021-12-30 14:30        MST     226     P
 
 ---------------------
 | Data Confirmation |
 ---------------------
-You entered the following:
+You entered the following: 
 Agency: USGS
 Site Number: 13206000
-Timestamp: Thu 30 Dec 2021 02:30:00 PM MST
+Local Timestamp: Thu 30 Dec 2021 02:30:00 PM MST
 UTC Timestamp: Thu 30 Dec 2021 09:30:00 PM UTC
 Flow Rate: 226.0
 Qualification Code: P
