@@ -155,7 +155,7 @@ The mapping of tab separated values (fields) within the line is shown in the ima
 The CSVParser example from the previous module is an excellent reference for how to use a Scanner to extract individual fields from a line of String data. In this case, the delimiter value will need to be changed from ',' to '\t'.  You will need to reuse the code in the first constructor to create the new Date object using data from the timeZone and timeStamp fields.
 
 #### Driver class
-Once the FlowSample class has been updated, add code to FlowSampleParser.java that uses a Scanner object to prompt the user for a line of tab separated data values, creates a new FlowSample object using the constructor created above, then calls each of the accessor methods and the toString method and displays the results in the console.
+Once the FlowSample class has been updated, add code to the main() method in FlowSampleParser.java that uses a Scanner object to prompt the user for a line of tab separated data values, creates a new FlowSample object using the constructor created above, then calls each of the accessor methods and the toString method and displays the results in the console.
 
 ##### Expected Program Output (with sample user input)
 ```
@@ -186,9 +186,9 @@ Flow Rate: 226.0
 ```
 
 ### Implementation Guide
-1. Expand the folder named FlowSampleParser, copy FlowSample.java from the Lab Warmup and open FlowSample.java and FlowSampleParser.java
+1. Expand the folder named FlowSampleParser, copy FlowSample.java from the FlowSampleEntry activity and open FlowSample.java and FlowSampleParser.java
 2. Design a program to satisfy the requirements in the Problem Description and Program Design sections
-3. Test the program using the sample user input and compare against the expected output. Carefully think about each of the different cases you'll need to test for to verify that the application is functioning properly.
+3. Test the program using the sample user input and compare against the expected output. 
 4. Commit the changes to your local repository with a message stating that Lab Activity 1 is completed.
 5. Push the changes from your local repository to the github classroom repository.
 
