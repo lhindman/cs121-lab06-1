@@ -23,25 +23,55 @@ Each sample contains the following values:
 - QualificationCode (P means provisional value, subject to change)
 
 ### Program Design
+#### Instance Variables
 The FlowSample class will represent a single sample of data.  It should contain private instance variables for each of the above sample values with data types as follows:
 - String: agency, siteNumber, timeZone and qualCode
 - double: flowRate
 - DataTime: timestamp
 
+#### Constructor
 The constructor for FlowSample should be an initial value constructor with the following header signature:
 ```
 public FlowSample(String agency, String siteNumber, String timeZone, String qualCode, String timestamp, double flowRate)
 ```
 Note:  We're introducing two new classes here to help us work more effectively with the timestamp data. Specifically they are the [Date](https://docs.oracle.com/javase/8/docs/api/java/util/Date.html) and [SimpleDateFormat](https://docs.oracle.com/javase/8/docs/api/java/text/SimpleDateFormat.html). Depending upon the semester, we may or may not introduce these classes in Module 3. However, these classes are sufficiently covered in the walkthrough video to satisfy the requirements of this lab even if we did not specificly present these classes in the lecture videos this semester.  :)
 
+#### Getters and Setters
 Once created, a sample should not be able to be modified, so no mutator (setter) methods should be created. However accessor (getter) methods should be created for each of the instance variables except time zone. Two accessor methods should be implemented for the timestamp data, one that shows the local time formatted as a String and a second that shows UTC time formated as a String. The following lists the expected accessor methods for the FlowSample class
 ```
 public String getAgency()
 public String getSiteNumber()
-public String getLocalTimestamp()
-public String getUTCTimestamp()
 public double getFlowRate()
 public String getQualCode()
+```
+
+#### Other Methods
+Instead of writing a simple accessor method called getTimestamp that returns a reference to the Date object, it is more useful to provide methods that can process the timezone information appropriately and return a String value with a custom date and time format.  Use the javadoc comments below to implement the required functionality
+```
+    /**
+     * Return a String representation of the with the following
+     *     custom format: "EEE dd MMM yyyy hh:mm:ss a z"
+     * 
+     *     The timezone value should remain unchanged
+     * 
+     *     Example: Thu 30 Dec 2021 02:30:00 PM MST
+     *
+     * @return Timestamp with custom format
+     */
+    public String getTimestamp() {...}
+```
+```
+    /**
+     * Return a String representation of the with the following
+     *     custom format: "EEE dd MMM yyyy hh:mm:ss a z"
+     * 
+     *     The timezone value should adjusted to UTC
+     * 
+     *     Example: Thu 30 Dec 2021 09:30:00 PM UTC
+     *
+     * @return UTC Timestamp with custom format
+     */
+    public String getUTCTimestamp() {...}
 ```
 
 Add a toString() method that represents the FlowSample object as a nicely formatted String as shown below:
