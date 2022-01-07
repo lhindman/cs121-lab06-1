@@ -74,11 +74,19 @@ public String getTimestamp() {...}
 public String getUTCTimestamp() {...}
 ```
 
-Add a toString() method that represents the FlowSample object as a nicely formatted String as shown below. 
+Add a toString() method that represents the FlowSample object as a nicely formatted String as shown in the javadoc comment below
 ```
-### <agency> - <siteNumber> ###
-Timestamp: <UTCTimeStamp>
-Flow Rate: <flowRate>
+/**
+ * Return a String representation of the current FlowSample object
+ *    using the following template:
+ *
+ *    ### <agency> - <siteNumber> ###
+ *    Timestamp: <UTCTimeStamp>
+ *    Flow Rate: <flowRate>
+ *
+ * @return String value representing this FlowSample object
+ */
+ public String toString() {...}
 ```
 
 #### Driver class ####
