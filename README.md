@@ -32,6 +32,7 @@ The constructor for FlowSample should be an initial value constructor with the f
 ```
 public FlowSample(String agency, String siteNumber, String timeZone, String qualCode, String timestamp, double flowRate)
 ```
+Note:  We're introducing two new classes here to help us work more effectively with the timestamp data. Specifically they are the [Date](https://docs.oracle.com/javase/8/docs/api/java/util/Date.html) and [SimpleDateFormat](https://docs.oracle.com/javase/8/docs/api/java/text/SimpleDateFormat.html). Depending upon the semester, we may or may not introduce these classes in Module 3. However, these classes are sufficiently covered in the walkthrough video to satisfy the requirements of this lab even if we did not specificly present these classes in the lecture videos this semester.  :)
 
 Once created, a sample should not be able to be modified, so no mutator (setter) methods should be created. However accessor (getter) methods should be created for each of the instance variables except time zone. Two accessor methods should be implemented for the timestamp data, one that shows the local time formatted as a String and a second that shows UTC time formated as a String. The following lists the expected accessor methods for the FlowSample class
 ```
@@ -48,7 +49,7 @@ Add a toString() method that represents the FlowSample object as a nicely format
 ```
 ### <agency> - <siteNumber> ###
 Time: <UTCTimeStamp>
-Value: <flowRate>
+Flow Rate: <flowRate>
 ```
 
 Once the FlowSample class has been create, add code to FlowSampleEntry.java that users a Scanner object to prompt the user for each of the data values, creates a new FlowSample object, then calls each of the accessor methods and the toString method and displays the results in the console.
