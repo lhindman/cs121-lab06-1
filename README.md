@@ -48,30 +48,30 @@ public String getQualCode()
 #### Other Methods
 Instead of writing a simple accessor method called getTimestamp that returns a reference to the Date object, it is more useful to provide methods that can process the timezone information appropriately and return a String value with a custom date and time format.  Use the javadoc comments below to implement the required functionality
 ```
-    /**
-     * Return a String representation of the timestamp with the following
-     *     custom format: "EEE dd MMM yyyy hh:mm:ss a z"
-     * 
-     *     The timezone value should remain unchanged
-     * 
-     *     Example: Thu 30 Dec 2021 02:30:00 PM MST
-     *
-     * @return Timestamp with custom format
-     */
-    public String getTimestamp() {...}
+/**
+ * Return a String representation of the timestamp with the following
+ *     custom format: "EEE dd MMM yyyy hh:mm:ss a z"
+ * 
+ *     The timezone value should remain unchanged
+ * 
+ *     Example: Thu 30 Dec 2021 02:30:00 PM MST
+ *
+ * @return Timestamp with custom format
+ */
+public String getTimestamp() {...}
 ```
 ```
-    /**
-     * Return a String representation of the timestamp with the following
-     *     custom format: "EEE dd MMM yyyy hh:mm:ss a z"
-     * 
-     *     The timezone value should adjusted to UTC
-     * 
-     *     Example: Thu 30 Dec 2021 09:30:00 PM UTC
-     *
-     * @return UTC Timestamp with custom format
-     */
-    public String getUTCTimestamp() {...}
+/**
+ * Return a String representation of the timestamp with the following
+ *     custom format: "EEE dd MMM yyyy hh:mm:ss a z"
+ * 
+ *     The timezone value should adjusted to UTC
+ * 
+ *     Example: Thu 30 Dec 2021 09:30:00 PM UTC
+ *
+ * @return UTC Timestamp with custom format
+ */
+public String getUTCTimestamp() {...}
 ```
 
 Add a toString() method that represents the FlowSample object as a nicely formatted String as shown below:
