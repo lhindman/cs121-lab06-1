@@ -154,6 +154,8 @@ The mapping of tab separated values (fields) within the line is shown in the ima
 
 The CSVParser example from the previous module is an excellent reference for how to use a Scanner to extract individual fields from a line of String data. In this case, the delimiter value will need to be changed from ',' to '\t'.  You will need to reuse the code in the first constructor to create the new Date object using data from the timeZone and timeStamp fields.
 
+For this activity, you may assume that the user provides correctly formatted tsv data. The purpose of this activity is to demonstrate mutliple ways that a new object can be instantiated, not on all the ways the end user can frack up data entry. :)
+
 #### Driver class
 Once the FlowSample class has been updated, add code to the main() method in FlowSampleParser.java that uses a Scanner object to prompt the user for a line of tab separated data values, creates a new FlowSample object using the constructor created above, then calls each of the accessor methods and the toString method and displays the results in the console.
 
