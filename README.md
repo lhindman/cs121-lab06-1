@@ -10,7 +10,7 @@ Please review the [CS121 Style Guide](https://docs.google.com/document/d/1LWbGQB
 - Code must run without errors or warnings on safe-path and edge test cases
 - More to come as we learn about input validation and exception handling 
 
-## Lab Warmup - FlowSampleEntry (Required)
+## Lab Warmup - FlowSampleEntry
 ### Problem Description
 Create a class called FlowSample that represents a single, point-in-time snapshot, of USGS river flow water data. For this lab we will be using data collected from the [Boise River at the Glenwood Bridge](https://waterdata.usgs.gov/monitoring-location/13206000/#parameterCode=00060&period=P7D). A sample data file containing 7 days worth of samples has been included. Detailed information on the format of this information can be found on the [USGS NWIS Help Site](http://help.waterdata.usgs.gov/faq/about-tab-delimited-output). 
 
@@ -154,7 +154,7 @@ Flow Rate: 226.0
 4. Commit the changes to your local repository with a message stating that Lab Warmup is completed.
 5. Push the changes from your local repository to the github classroom repository.
 
-## Lab Activity 1 - FlowSampleParser (Required)
+## Lab Activity 1 - FlowSampleParser
 ### Problem Description
 The USGS provides FlowSample data in tab-delimited lines of text where each data field is separate by tabs. This is nearly the same situation that we learned about in the previous module with comma separated values, except here tabs are used to separate the fields instead of commas. For this activity we are going add functionality to the FlowSample class so that we can construct a new FlowSample from a single String value containing the required fields in tab-delimited format. Instead of prompting the user for each individual value, we will prompt the user for a single line of text that contains the tab-separated values as shown in the output below:
 
@@ -215,13 +215,3 @@ Flow Rate: 226.0
 3. Test the program using the sample user input and compare against the expected output. 
 4. Commit the changes to your local repository with a message stating that Lab Activity 1 is completed.
 5. Push the changes from your local repository to the github classroom repository.
-
-## Coding Journal (Optional)
-Keep a journal of your activities as you work on this lab. Many of the best engineers that I have worked with professionally have kept some sort of engineering journal. I personally packed notebooks around with me for nearly 8 years before I began keeping my notes electronically.   
-
-Your journal can track ideas, bugs, cool links, code snippets, shell commands, rants, or simply a reflection on what worked well or not-so-well with this lab activity. I will not be grading the content of your journal, but I will expect at least two timestamped journal entries of at least a 75 to 150 words each added to the provided Journal.md file.  The purpose of this component is to help develop the habit of taking notes and creating documentation while you code. The more detail you provide the better as that will help you if you ever need to refer back to this project in the future.
-
-## Markdown Resources
-Markdown is a notation that is used to format text documents.  It is widely used in Software Development shops around the world, which is why we're asking you to use it in your lab documentation.  
-
-Github provides a guide for getting started:  [Mastering Markdown](https://guides.github.com/features/mastering-markdown/)
