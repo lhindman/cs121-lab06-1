@@ -112,7 +112,7 @@ Add a toString() method that represents the FlowSample object as a nicely format
 ```
 
 #### Driver class ####
-Once the FlowSample class has been create, add code to the main() method in FlowSampleEntry.java that uses a Scanner object to prompt the user for each of the data values, creates a new FlowSample object, then calls each of the accessor methods and the toString method and displays the results in the console.
+Once the FlowSample class has been created, add code to the main() method in FlowSampleEntry.java that uses a Scanner object to prompt the user for each of the data values, creates a new FlowSample object, then calls each of the accessor methods and the toString method and displays the results in the console.
 
 ##### Expected Program Output (with sample user input)
 ```
