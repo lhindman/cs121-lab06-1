@@ -1,7 +1,6 @@
 ![CS121 Banner](images/CS121-BANNER.svg)
 # Module 6 Lab Guide (part 1)
-## Getting Started
-[Lab Introduction Video](https://youtu.be/Gz_ZKspfhuE)  
+[Lab Introduction Video](https://boisestate.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=1f5577fb-fcec-43c7-beb5-ae290012b284&start=0)  
 
 ### Code Style Requirements
 Please review the [CS121 Style Guide](https://docs.google.com/document/d/1LWbGQBKkApnNAzzgwOSvRM03DmhYWx5yEfecT2WXfjI/edit?usp=sharing) and apply it in all lab activities and projects this semester. Coding Style will assessed as part of your lab and project grades.
@@ -12,6 +11,7 @@ Please review the [CS121 Style Guide](https://docs.google.com/document/d/1LWbGQB
 - More to come as we learn about input validation and exception handling 
 
 ## Lab Warmup - FlowSampleEntry
+[Walkthrough Video](https://boisestate.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=858929c6-5516-4953-b510-ae2900e8ed31&start=0)  
 ### Problem Description
 Create a class called FlowSample that represents a single, point-in-time snapshot, of USGS river flow water data. For this lab we will be using data collected from the [Boise River at the Glenwood Bridge](https://waterdata.usgs.gov/monitoring-location/13206000/#parameterCode=00060&period=P7D). A sample data file containing 7 days worth of samples has been included. Detailed information on the format of this information can be found on the [USGS NWIS Help Site](http://help.waterdata.usgs.gov/faq/about-tab-delimited-output). 
 
